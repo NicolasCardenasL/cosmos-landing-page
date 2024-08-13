@@ -1,0 +1,86 @@
+---
+---
+<header>
+    <div>
+        <img src="../img/MobileOdysseyLogo.png" class="MobileOdysseyLogo">
+        <img src="../img/TabletOdysseyLogo.png" class="TabletOdysseyLogo">
+        <img src="../img/DeskOdysseyLogo.png" class="DeskOdysseyLogo">
+    </div>
+    <div>
+        <ul class="navList">
+            <li><a href="/">Stay Connected</a></li>
+            <li><a href="/">Education</a></li>
+            <li><a href="/">Community</a></li>
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Sign In</a></li>
+        </ul>
+        <svg class="menuIcon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 5.17497L18.83 8.00497L16 10.835L13.17 8.00497L16 5.17497ZM8.34003 5.65497V9.65497H4.34003V5.65497H8.34003ZM18.34 15.655V19.655H14.34V15.655H18.34ZM8.34003 15.655V19.655H4.34003V15.655H8.34003ZM16 2.34497L10.34 7.99497L16 13.655L21.66 7.99497L16 2.34497ZM10.34 3.65497H2.34003V11.655H10.34V3.65497ZM20.34 13.655H12.34V21.655H20.34V13.655ZM10.34 13.655H2.34003V21.655H10.34V13.655Z" fill="#0D0F12"/>
+        </svg>
+    </div>
+</header>
+<style>
+	@media (min-width: 375px) and (max-width: 1023px) {
+        .navList {
+            display: None;
+        }
+        .DeskOdysseyLogo {
+            display: None;
+        }
+
+        .TabletOdysseyLogo {
+            display: None;
+        }
+    }
+
+	@media (min-width: 1024px) and (max-width: 1919px) {
+        ul {
+            gap: 0px;
+        }
+        .menuIcon {
+            display: None;
+        }
+
+        .DeskOdysseyLogo {
+            display: None;
+        }
+
+        .MobileOdysseyLogo {
+            display: None;
+        }
+    }
+
+	@media (min-width: 1920px) {
+        .menuIcon {
+            display: None;
+        }
+
+        .TabletOdysseyLogo {
+            display: None;
+        }
+
+        .MobileOdysseyLogo {
+            display: None;
+        }
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+    }
+    li {
+        padding: 10px;
+    }
+    ul li a {
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        color: var(--text-black)
+    }
+</style>

@@ -2,7 +2,6 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -17,34 +16,70 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<slot/>
 	</body>
 </html>
 <style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500..800&display=swap');
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		/* not available for media queries */
+		/* --min-desk-resolution: 1920px;
+		--max-tablet-resolution: 1919px;
+		--min-tablet-resolution: 1024px;
+		--max-mobile-resolution: 1023px;
+		--min-mobile-resolution: 375px; */
+
+		--text-white: #FFFFFF;
+		--text-black: #020305;
+	 	--text-soft-black: #171E27; 
+
+		--bg-color-black: #0D0F12;
+
+		--jakarta-font: Plus Jakarta Sans;
+		--font-weight-base: 500;
+		--font-weight-semibold: 600;
+		--font-weight-bold: 800;
+
+		--desk-line-height-text: 2.0625rem;
+		--desk-line-height-h2: 1.875rem;
+		--desk-line-height-h1: 5.0625rem;
+		--desk-font-size-sm: 1.125rem;
+		--desk-font-size-md: 1.5rem;
+		--desk-font-size-lg: 4rem;
+
+		
+		--font-size-sm: 1rem;
+		--font-size-md: 1.125rem;
+		--font-size-lg: 2.5rem;
+		--line-height-sm: 1.625rem;
+		--line-height-md: 1.4375rem;
+		--line-height-lg: 3.125rem;
+		
+		--desk-layout-padding: 60px 80px;
+		--mobile-layout-padding: 25px 35px;
+		--tablet-layout-padding: 15px 35px;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+		font-family: var(--jakarta-font);
+		font-weight: var(--font-weight-base);
+		font-size: var(--font-size-sm);
+		line-height: var(--line-height-sm);
+		color: var(--text-soft-black);
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	
+	@media (min-width: 375px) and (max-width: 1023px) {
+		body {
+			padding: var(--mobile-layout-padding);		
+		}
+	}
+	@media (min-width: 1024px) and (max-width: 1919px) {
+		body {
+			padding: var(--tablet-layout-padding);		
+		}
+	}
+	@media (min-width: 1920px) {
+		body {
+			padding: var(--desk-layout-padding);		
+		}
 	}
 </style>
