@@ -25,15 +25,16 @@ const { title } = Astro.props;
 		/* not available for media queries */
 		/* --min-desk-resolution: 1920px;
 		--max-tablet-resolution: 1919px;
-		--min-tablet-resolution: 1024px;
-		--max-mobile-resolution: 1023px;
+		--min-tablet-resolution: 1060px;
+		--max-mobile-resolution: 1059px;
 		--min-mobile-resolution: 375px; */
-
+		
 		--text-white: #FFFFFF;
 		--text-black: #020305;
 	 	--text-soft-black: #171E27; 
 
 		--bg-color-black: #0D0F12;
+		--bg-color-softblack: #22262c;
 
 		--jakarta-font: Plus Jakarta Sans;
 		--font-weight-base: 500;
@@ -48,7 +49,7 @@ const { title } = Astro.props;
 		--desk-font-size-lg: 4rem;
 
 		
-		--font-size-sm: 1rem;
+		--font-size-sm: 0.9rem;
 		--font-size-md: 1.125rem;
 		--font-size-lg: 2.5rem;
 		--line-height-sm: 1.625rem;
@@ -57,22 +58,26 @@ const { title } = Astro.props;
 		
 		--desk-layout-padding: 60px 80px;
 		--mobile-layout-padding: 25px 35px;
-		--tablet-layout-padding: 15px 35px;
+		--tablet-layout-padding: 25px 80px;
 	}
 	html {
-		font-family: var(--jakarta-font);
+		font-family: var(--jakarta-font), 'system-ui', 'sans-serif';
 		font-weight: var(--font-weight-base);
 		font-size: var(--font-size-sm);
 		line-height: var(--line-height-sm);
 		color: var(--text-soft-black);
 	}
-	
-	@media (min-width: 375px) and (max-width: 1023px) {
+	@media (min-width: 1px) and (max-width: 374px) {
+        body { 
+            display: none;
+        }
+    }
+	@media (min-width: 375px) and (max-width: 1059px) {
 		body {
 			padding: var(--mobile-layout-padding);		
 		}
 	}
-	@media (min-width: 1024px) and (max-width: 1919px) {
+	@media (min-width: 1060px) and (max-width: 1919px) {
 		body {
 			padding: var(--tablet-layout-padding);		
 		}
