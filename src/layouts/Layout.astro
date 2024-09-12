@@ -29,62 +29,56 @@ const { title } = Astro.props;
 		--max-mobile-resolution: 1059px;
 		--min-mobile-resolution: 375px; */
 		
-		--text-white: #FFFFFF;
-		--text-black: #020305;
-	 	--text-soft-black: #171E27; 
+			/* Colors */
+		--color-text-white: #FFFFFF;
+		--color-text-black: #020305;
+		--color-text-soft-black: #171E27;
 
-		--bg-color-black: #0D0F12;
-		--bg-color-softblack: #22262c;
+		--color-bg-black: #0D0F12;
+		--color-bg-soft-black: #22262c;
 
-		--jakarta-font: Plus Jakarta Sans;
-		--font-weight-base: 500;
+		/* Fonts */
+		--font-family-jakarta: 'Plus Jakarta Sans', sans-serif;
+		--font-weight-normal: 500;
 		--font-weight-semibold: 600;
 		--font-weight-bold: 800;
 
-		--desk-line-height-text: 2.0625rem;
-		--desk-line-height-h2: 1.875rem;
-		--desk-line-height-h1: 5.0625rem;
-		--desk-font-size-sm: 1.125rem;
-		--desk-font-size-md: 1.5rem;
-		--desk-font-size-lg: 4rem;
+		/* Font Sizes */
+		--font-size-small: 0.9rem;
+		--font-size-medium: 1.125rem;
+		--font-size-large: 2.5rem;
+		--font-size-desk-small: 1.125rem;
+		--font-size-desk-medium: 1.5rem;
+		--font-size-desk-large: 4rem;
 
-		
-		--font-size-sm: 0.9rem;
-		--font-size-md: 1.125rem;
-		--font-size-lg: 2.5rem;
-		--line-height-sm: 1.625rem;
-		--line-height-md: 1.4375rem;
-		--line-height-lg: 3.125rem;
-		
-		--desk-layout-padding: 60px 80px;
-		--mobile-layout-padding: 25px 35px;
-		--tablet-layout-padding: 25px 80px;
+		/* Line Heights */
+		--line-height-smallall: 1.625rem;
+		--line-height-medium: 1.4375rem;
+		--line-height-large: 3.125rem;
+		--line-height-desk-text: 2.0625rem;
+		--line-height-desk-h2: 1.875rem;
+		--line-height-desk-h1: 5.0625rem;
 	}
 	html {
-		font-family: var(--jakarta-font), 'system-ui', 'sans-serif';
-		font-weight: var(--font-weight-base);
-		font-size: var(--font-size-sm);
-		line-height: var(--line-height-sm);
-		color: var(--text-soft-black);
+		font-family: var(--font-family-jakarta), 'system-ui', 'sans-serif';
+		font-weight: var(--font-weight-normal);
+		font-size: var(--font-size-small);
+		line-height: var(--line-height-small);
+		color: var(--color-text-soft-black);
 	}
-	@media (min-width: 1px) and (max-width: 374px) {
-        body { 
-            display: none;
-        }
-    }
-	@media (min-width: 375px) and (max-width: 1059px) {
+	@media (max-width: 1059px) {
 		body {
-			padding: var(--mobile-layout-padding);		
+			padding: 25px 35px;		
 		}
 	}
 	@media (min-width: 1060px) and (max-width: 1919px) {
 		body {
-			padding: var(--tablet-layout-padding);		
+			padding: 25px 80px;		
 		}
 	}
 	@media (min-width: 1920px) {
 		body {
-			padding: var(--desk-layout-padding);		
+			padding: 60px 80px;		
 		}
 	}
 </style>

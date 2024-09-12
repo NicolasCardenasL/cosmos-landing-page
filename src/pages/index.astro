@@ -1,17 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import AboutUs from "../components/AboutUs.astro"
-import LogIn from "../components/LogIn.astro"
-import Main from "../components/Main.astro"
-import CommunitySection from "../components/CommunitySection.astro"
+import Header from "../components/Header/main.astro"
+import Footer from "../components/Footer/main.astro"
+import CommunityFeatures from "../components/CommunityFeatures/main.astro"
+import CallToAction from "../components/CallToAction/main.astro"
+import HeroSection from "../components/HeroSection/main.astro"
+import EducationalResources from "../components/EducationalResources/main.astro"
+import PartnertLogos from "../components/PartnerLogos/main.astro"
 ---
 <Layout title={"Home"}>
     <Header></Header>
-    <Main></Main>
-    <CommunitySection></CommunitySection>
-    <AboutUs></AboutUs>
-    <LogIn></LogIn>
+    <HeroSection></HeroSection>
+    <PartnertLogos></PartnertLogos>
+    <CommunityFeatures></CommunityFeatures>
+    <EducationalResources></EducationalResources>
+    <CallToAction></CallToAction>
     <Footer></Footer>
 </Layout>

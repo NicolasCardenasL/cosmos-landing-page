@@ -1,0 +1,70 @@
+<nav>
+    <ul>
+        <li><a href="/">Stay Connected</a></li>
+        <li><a href="/">Education</a></li>
+        <li><a href="/">ParnertLogos</a></li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/">Sign In</a></li>
+    </ul>
+</nav>
+<style>
+    @media (min-width: 0px) and (max-width: 1059px) {
+        ul {
+            display: none;
+        }  
+    }
+    
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            align-items: center
+        }
+        ul li a {
+            font-size: var(--font-size-small);
+            line-height: var(--line-height-small);
+        }
+    }
+    
+	@media (min-width: 1920px) {
+        ul {
+            gap: 20px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center
+        }
+    }
+
+    a {
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        color: var(--text-black)
+    }
+    ul li a {
+        padding: 18px 30px;
+    }
+    ul li:last-child a {
+        cursor: pointer;
+        border-radius: 20px;
+        color: var(--text-white);
+        background-color: var(--bg-color-black);
+        position: relative;
+        user-select: none;
+    }
+    ul li:last-child:hover {
+        transition: transform 0.1s ease-out;
+        transform: translateY(-4px);
+    }
+    ul li:last-child a:hover {
+        box-shadow: 0 6px 7px rgba(83, 100, 255, 0.32);
+        transition: all 0.1s ease-out;
+    }
+    ul li:last-child:active {
+        transform: translateY(2px);
+        transition: all 0.1s ease-out;
+    }
+
+</style>

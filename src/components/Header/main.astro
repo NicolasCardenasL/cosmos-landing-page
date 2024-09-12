@@ -1,0 +1,112 @@
+---
+import ResponsiveMenuIcon from "./icons/ResponsiveMenuIcon.astro";
+import ResponsiveNav from "./ResponsiveNav.astro"
+// import ResponsiveSideNav from "./ResponsiveSideNav.astro"
+import ResposiveLogo from "./ResposiveLogo.astro"
+
+
+---
+<header>
+    <ResposiveLogo></ResposiveLogo>
+    <ResponsiveNav></ResponsiveNav>
+    <ResponsiveMenuIcon className="menuIcon"></ResponsiveMenuIcon>
+    <!-- <ResponsiveSideNav></ResponsiveSideNav> -->
+</header>
+<style>
+	@media (min-width: 0px) and (max-width: 1059px) {
+        .exitIcon {
+            width: 50px;
+            height: 50px;
+        }
+        .menuIcon:active ~ .sideNavList {
+            display: flex;
+        }
+        .sideNavList {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            height: 100dvh;
+            width: 100vdw;
+            background-color: var(--bg-color-white);
+            overflow-x: hidden;
+            transition: 0.5s;
+            z-index: 99;
+            flex-direction: column;
+            margin: 0;
+            gap: 15px;
+            align-items: left;
+            display: none;
+        }
+        .sideNavList
+        .sideNavList a {
+            font-size: var(--font-size-md);
+            color: var(--text-black);
+            margin: 20px 0px 20px 0px;
+        }
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        .sideNavList {
+            display: none;
+        }
+        .menuIcon {
+            display: None;
+        }
+    }
+    
+	@media (min-width: 1920px) {
+        .sideNavList {
+            display: none;
+        }
+        .menuIcon {
+            display: None;
+        }
+    }
+    hr {
+        width: 100%;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+    a {
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        color: var(--text-black)
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+    }
+    .navList li a {
+        padding: 18px 30px;
+    }
+    .navList li:last-child a {
+        cursor: pointer;
+        border-radius: 20px;
+        color: var(--text-white);
+        background-color: var(--bg-color-black);
+        position: relative;
+        user-select: none;
+    }
+    .navList li:last-child:hover {
+        transition: transform 0.1s ease-out;
+        transform: translateY(-4px);
+    }
+    .navList li:last-child a:hover {
+        box-shadow: 0 6px 7px rgba(83, 100, 255, 0.32);
+        border: black 1px;
+        background-color: #FFFF;
+        color: black;
+        transition: all 0.1s ease-out;
+    }
+    .navList li:last-child:active {
+        transform: translateY(2px);
+        transition: all 0.1s ease-out;
+    }
+    img, svg {
+        user-select: none;
+    }
+</style>
