@@ -1,0 +1,17 @@
+---
+interface Props {
+	className?: string;
+}
+const { className } = Astro.props;
+---
+
+<button class={className} >
+    <slot></slot>
+</button>
+
+<style>
+    button {
+        border-radius: 20px;
+        padding: 26px, 54px, 26px, 54px;
+    }
+</style>

@@ -1,0 +1,54 @@
+---
+interface Props {
+	className: string;
+}
+const { className } = Astro.props;
+---
+<div>
+    <img class=`mobile-astronaut-stats ${className}` src="./src/components/HeroSection/img/mobile-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+    <img class=`tablet-astronaut-stats ${className}` src="./src/components/HeroSection/img/tablet-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+    <img class=`desk-astronaut-stats ${className}` src="./src/components/HeroSection/img/desk-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+</div>
+<style>
+    
+    @media (max-width: 1059px) {
+        .mobile-astronaut-stats {
+            width: 360px;
+            height: 440px;
+            z-index: 9;
+        }
+        .desk-astronaut-stats {
+            display: None;
+        }
+        
+        .tablet-astronaut-stats {
+            display: None;
+        }
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        .tablet-astronaut-stats {
+            min-width: 154px;
+        }
+        .desk-astronaut-stats {
+            display: None;
+        }
+        
+        .mobile-astronaut-stats {
+            display: None;
+        }
+    }
+    
+	@media (min-width: 1920px) { 
+        .desk-astronaut-stats {
+            min-width: 205px;
+        }
+        .tablet-astronaut-stats {
+            display: None;
+        }
+        
+        .mobile-astronaut-stats {
+            display: None;
+        }
+    }
+</style>

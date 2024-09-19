@@ -44,22 +44,33 @@ const { title } = Astro.props;
 		--font-weight-bold: 800;
 
 		/* Font Sizes */
+		--font-size-title-mobile: 32px;
+		--line-height-title-mobile: 40.32px;
+
+		/* The following variables aply both on mobile and tablet */
 		--font-size-small: 0.9rem;
 		--font-size-medium: 1.125rem;
 		--font-size-large: 2.5rem;
+
 		--font-size-desk-small: 1.125rem;
 		--font-size-desk-medium: 1.5rem;
 		--font-size-desk-large: 4rem;
 
 		/* Line Heights */
-		--line-height-smallall: 1.625rem;
+		/* The following variables aply both on mobile and tablet */
+		--line-height-small: 1.625rem;
 		--line-height-medium: 1.4375rem;
 		--line-height-large: 3.125rem;
+
 		--line-height-desk-text: 2.0625rem;
 		--line-height-desk-h2: 1.875rem;
 		--line-height-desk-h1: 5.0625rem;
+
+		/* --padding-register-btn-tablet: 20px, 40px, 20px, 40px;
+		--padding-register-btn-desk: 26px, 54px, 26px, 54px; */
 	}
 	html {
+		width: 100dvw;
 		font-family: var(--font-family-jakarta), 'system-ui', 'sans-serif';
 		font-weight: var(--font-weight-normal);
 		font-size: var(--font-size-small);
@@ -68,12 +79,13 @@ const { title } = Astro.props;
 	}
 	@media (max-width: 1059px) {
 		body {
-			padding: 25px 35px;		
+			padding: 0px 24px;	
+			margin: 0;	
 		}
 	}
 	@media (min-width: 1060px) and (max-width: 1919px) {
 		body {
-			padding: 25px 80px;		
+			padding: 0px 80px;		
 		}
 	}
 	@media (min-width: 1920px) {

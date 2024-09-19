@@ -1,0 +1,13 @@
+---
+interface Props {
+	title: string;
+	srcIcon: string;
+}
+const { title, srcIcon } = Astro.props;
+---
+
+<div class="community-feature">
+    <img src=`${srcIcon}` alt="">
+    <h2>{title}</h2>
+    <p><slot></slot></p>
+</div>
