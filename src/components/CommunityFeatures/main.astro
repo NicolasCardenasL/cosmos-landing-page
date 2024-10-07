@@ -1,12 +1,35 @@
 ---
+import Title from "../Title.astro";
 import Feature from "./Feature.astro";
+
+const communityFeaturesIconSrc = "./src/components/CommunityFeatures/icons"
 ---
-<section>
-    <h1>Join our vibrant community of space enthusiasts where you can</h1>
-    <div>
-        <Feature title="Astronomy 101" srcIcon="">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Feature>
-        <Feature title="Astronomy 101" srcIcon="">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Feature>
-        <Feature title="Astronomy 101" srcIcon="">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Feature>
-        <Feature title="Astronomy 101" srcIcon="">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Feature>
+<section class="community-features-section">
+    <Title className="community-feautures-title" title="Join our vibrant community of space enthusiasts where you can"></Title>
+    <div class="community-features">
+        <Feature subtitle="Astronomy 101" srcIcon=`${communityFeaturesIconSrc}/astronomy-icon.svg` iconAlt="Astronomy 101 Icon" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Feature>
+        <Feature subtitle="Latest Discoveries" srcIcon=`${communityFeaturesIconSrc}/discoveries-icon.svg` iconAlt="Latest Discoveries Icon" description="Stay up-to-date with the most recent breakthroughs and discoveries in the field of astrophysics and space exploration."></Feature>
+        <Feature subtitle="Space Exploration" srcIcon=`${communityFeaturesIconSrc}/space-exploration-icon.svg` iconAlt="Space Exploration Icon" description="Explore the latest missions, both past and present, from NASA, ESA, SpaceX, and other space agencies and organizations."></Feature>
+        <Feature subtitle="Space Technology" srcIcon=`${communityFeaturesIconSrc}/space-technology-icon.svg` iconAlt="Space Tech Icon" description="Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems."></Feature>
     </div>
 </section>
+<style is:global>
+    @media (max-width: 1059px) {
+        .community-features-section {
+            margin-bottom: 50px;
+        }
+        .community-features {
+            
+        }
+        .community-feautures-title {
+            max-width: 650px;
+        }
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+    }
+    
+	@media (min-width: 1920px) { 
+           
+    }
+</style>

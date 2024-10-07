@@ -1,13 +1,39 @@
 ---
-import MarsOverview from "./MarsOverview.astro";
+import PlanetOverview from "../PlanetOverview.astro";
+import Title from "../Title.astro";
 import Resource from "./Resource.astro";
+
+const educationalResourcesImgSrc = './src/components/EducationalResources/img'
 ---
 
 <section>
-    <MarsOverview></MarsOverview>
-    <div>
-        <Resource stepNumber="01" title="Online Free courses and tutorials">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Resource>
-    <Resource stepNumber="01" title="Online Free courses and tutorials">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Resource>
-    <Resource stepNumber="01" title="Online Free courses and tutorials">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</Resource>
+    <PlanetOverview 
+        imageWrapHeight="393px"
+        mobileImgSrc=`${educationalResourcesImgSrc}/mobile-mars-overview.jpg`
+        tabletImgSrc=`${educationalResourcesImgSrc}/tablet-mars-overview.png`
+        deskImgSrc=`${educationalResourcesImgSrc}/desk-mars-overview.png`>
+        <Title className="overview-title" title="We are committed to making space science accessible to all. Explore our educational resources, including"></Title>
+    </PlanetOverview>
+    <div class="e-resources">
+        <Resource stepNumber="01" title="Online Free courses and tutorials" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
+        <Resource stepNumber="02" title="Resources for teachers and educators" description="Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems and space habitats."></Resource>
+        <Resource stepNumber="03" title="Book recommendations and reviews" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
     </div>
 </section>
+
+<style is:global>
+    .e-resources {
+        position: relative;
+        /* The right position was writed base on the most similar-looking aproximation to the figma design*/
+        top: -140px;
+        /* The left position was writed base on the Resource padding */
+        left: -15px;
+        z-index: 10;
+        display: grid;
+    }
+    .overview-title {
+        /* The max-width property was writed base on the most similar-looking aproximation to the figma design*/
+        max-width: 327px;
+    }
+</style>
+

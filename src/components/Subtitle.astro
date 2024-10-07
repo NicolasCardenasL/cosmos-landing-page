@@ -1,0 +1,35 @@
+---
+interface Props {
+	className?: string;
+	subtitle: string;
+}
+const { className, subtitle } = Astro.props;
+---
+
+<h2 class={className}>
+    {subtitle}
+</h2>
+
+<style is:global>
+    h2 {
+        margin: 0px;
+    }
+    @media (max-width: 1059px) {
+        h2 {
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-subtitle-mobile);
+            line-height: var(--line-height-subtitle-mobile);
+        }
+    }
+    
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        h2 {
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-subtitle-mobile);
+            line-height: var(--line-height-subtitle-mobile);
+        }
+    }
+	@media (max-width: 1920px) {
+
+    }
+</style>

@@ -3,28 +3,26 @@ interface Props {
 	className?: string;
 	bgColor: string;
 	textColor: string;
-    span: string;
+    placeHolder: string;
 }
-const { className, bgColor, textColor, span } = Astro.props;
+const { className, bgColor, textColor, placeHolder } = Astro.props;
 ---
 
-<button class={className} >
-    {span}
-</button>
+<input class={className} placeholder={placeHolder}>
+</input>
+
 <style define:vars={{ bgColor, textColor}}>
-    button {
+    input {
         background-color: var(--bgColor);
-        margin: 7px 0px;
         color: var(--textColor);
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border: none;
+        /* display: flex; */
+        /* align-items: center; */
     }
 	@media (max-width: 1919px) {
-        button {
-            border-radius: 14px;
-            padding: 18px 40px ;
+        input {
+            border-radius: 16px;
+            padding: 22px 24px;
         }
     }
     

@@ -1,0 +1,64 @@
+---
+interface Props {
+	mobileImgSrc: string;
+	tabletImgSrc: string;
+	deskImgSrc: string;
+    imgAlt: string;
+}
+const { mobileImgSrc, tabletImgSrc, deskImgSrc, imgAlt } = Astro.props;
+const partnerLogosDir = "./src/components/PartnerLogos/img"
+---
+
+<div>
+    <img class="mobile-logo" src=`${mobileImgSrc}` alt=`${imgAlt}`>
+    <img class="tablet-logo" src=`${tabletImgSrc}` alt=`${imgAlt}`>
+    <img class="desk-logo" src=`${deskImgSrc}` alt=`${imgAlt}`>
+</div>
+
+<style>
+    .mobile-logo {
+        display: none;
+    }
+    .tablet-logo {
+        display: none;
+    }
+    .desk-logo {
+        display: none;
+    }
+    @media (min-width: 0px) and (max-width: 1059px) {
+        img {
+            width: 152px;
+            height: 24px;
+        }
+        .mobile-logo {
+            display: block;
+        }
+
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        .TabletOdysseyLogo {
+            min-width: 154px;
+        }
+        .DeskOdysseyLogo {
+            display: None;
+        }
+        
+        .MobileOdysseyLogo {
+            display: None;
+        }
+    }
+    
+	@media (min-width: 1920px) { 
+        .DeskOdysseyLogo {
+            min-width: 205px;
+        }
+        .TabletOdysseyLogo {
+            display: None;
+        }
+        
+        .MobileOdysseyLogo {
+            display: None;
+        }
+    }
+</style>

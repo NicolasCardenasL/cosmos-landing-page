@@ -1,13 +1,47 @@
 ---
+import Subtitle from "../Subtitle.astro";
+import Text from "./../Text.astro"
 interface Props {
 	title: string;
 	stepNumber: string;
+    description: string;
 }
-const { title, stepNumber } = Astro.props;
+const { title, stepNumber, description } = Astro.props;
 ---
 
-<article>
-    <span>{stepNumber}</span>
-    <h3>{title}</h3>
-    <p><slot></slot></p>
+<article class="feature">
+    <Text text={stepNumber} className="step-number"></Text>
+    <Subtitle subtitle={title}></Subtitle>
+    <Text text={description}></Text>
 </article>
+
+<style is:global>
+    .feature {
+        padding: 0 15px;
+        background-color: white;
+    }
+    .step-number {
+        color: var(--soft-blue);
+    }
+    @media (max-width: 1059px) {
+        .feature {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 20px 39px -12px #63757C33;
+        }
+        .step-number {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 40.32px;
+            margin: 20px 0;
+        }
+    }
+    
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        
+    }
+    
+	@media (min-width: 1920px) { 
+        
+    }
+</style>

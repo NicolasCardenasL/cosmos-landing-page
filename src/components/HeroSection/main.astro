@@ -3,6 +3,8 @@ import Button from "../Button.astro"
 import PlanetOverview from "../PlanetOverview.astro"
 import Text from "../Text.astro"
 import Title from "../Title.astro"
+import AstronautStats from "./AstronautStats.astro"
+import OurMission from "./OurMission.astro"
 // import AstronautStats from "./AstronautStats.astro"
 // import EarthOverview from "./EarthOverview.astro"
 
@@ -10,61 +12,28 @@ const herosectionImgSrc = './src/components/HeroSection/img'
 ---
 <section>
     <PlanetOverview 
+        imageWrapHeight="381px"
         mobileImgSrc=`${herosectionImgSrc}/mobile-earth-view.png`
         tabletImgSrc=`${herosectionImgSrc}/tablet-earth-view.png`
         deskImgSrc=`${herosectionImgSrc}/desk-earth-view.png`>
         <Title className="overview-title" title="Unveiling the Wonders of the Universe"></Title>
     </PlanetOverview>
-    <Text>
-    At odissey, our mission is to inspire, educate, and ignite your passion for the cosmos. We are your premier destination for all things related to space exploration, astronomy, and the mysteries of the universe. Whether you're a seasoned astronomer or a curious novice, join us on a journey to the furthest reaches of the cosmos. 
-    </Text>
-    <Button>
-        Get Started
-    </Button>
-    <Button>
-        Watch Video
-    </Button>
+    <OurMission></OurMission>
 </section>
 
 <style is:global>
     .overview-title {
         color: var(--color-text-white);
+        max-width: 300px;
     }
-    /* article {
-        display: flex;
-        flex-direction: column;
-    }
-    .get-started {
-        cursor: pointer;
-        border-radius: 20px;
-        color: var(--text-white);
-        background-color: var(--bg-color-black);
-        position: relative;
-        user-select: none;
-        padding: var(--padding-register-btn-tablet);
-    }
-    .get-started:hover {
-        transition: transform 0.1s ease-out;
-        transform: translateY(-4px);
-    }
-    .get-started:hover {
-        box-shadow: 0 6px 7px rgba(83, 100, 255, 0.32);
-        transition: all 0.1s ease-out;
-    }
-    .get-started:active {
-        transform: translateY(2px);
-        transition: all 0.1s ease-out;
-    }
-    @media (max-width: 1059px) {
-        span {
-            position: ;
-            z-index: 10;
-            font-weight: var(--font-weight-bold);
-            font-size: var(--font-size-large);
-            line-height: var(--line-height-large);
-            color: var(--color-text-white);
+    @media (max-width: 749px) {
+        .astronaut-stats-section {
+            display: flex;
+            justify-content: center;
         }
     }
+    @media (min-width: 750px and max-width: 1059px)  {
+    } 
 
 	@media (min-width: 1060px) and (max-width: 1919px) {
       

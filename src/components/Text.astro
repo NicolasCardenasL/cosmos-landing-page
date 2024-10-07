@@ -1,12 +1,13 @@
 ---
 interface Props {
 	className?: string;
+    text: string;
 }
-const { className } = Astro.props;
+const { className, text} = Astro.props;
 ---
 
 <p class={className}>
-    <slot></slot>
+    {text}
 </p>
 <style>
     p {

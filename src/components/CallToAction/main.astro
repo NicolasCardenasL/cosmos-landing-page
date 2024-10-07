@@ -1,0 +1,43 @@
+---
+import PlanetOverview from "../PlanetOverview.astro";
+import Title from "../Title.astro";
+import Text from "../Text.astro";
+import Button from "../Button.astro";
+import Input from "../Input.astro";
+
+const callToActionImgDir = './src/components/CallToAction/img' 
+---
+
+<PlanetOverview className="call-to-action" imageWrapHeight="370px" deskImgSrc=`${callToActionImgDir}/venus-planet.png` mobileImgSrc=`${callToActionImgDir}/venus-planet.png` tabletImgSrc=`${callToActionImgDir}/venus-planet.png`>
+    <Title className="call-to-action-title" title="Join our community"></Title>
+    <Text className="call-to-action-text" text="of stargazers, explorers, and cosmic enthusiasts as we embark on a journey through the cosmos like never before."></Text>
+    <div class="suscribe-section">
+        <Input className="" bgColor="white" textColor="#171E2780" placeHolder="Enter Your Email"></Input>
+        <Button className="" bgColor="#A9C2CB" textColor="white" span="Suscribe"></Button>
+    </div>
+</PlanetOverview>
+
+<style is:global>
+    @media (min-width: 0px) and (max-width: 1059px) {
+        .suscribe-section {
+            display: inline-flex;
+            flex-direction: column;
+            width: 100%;
+        }    
+        .call-to-action {
+            align-content: space-between;
+        }
+
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+    
+    }
+    
+	@media (min-width: 1920px) { 
+        
+    }
+    .call-to-action-title, .call-to-action-text {
+        color: var(--color-text-white);
+    }
+</style>

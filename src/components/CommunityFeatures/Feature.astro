@@ -1,13 +1,41 @@
 ---
+import Subtitle from '../Subtitle.astro';
+import Text from '../Text.astro';
+
 interface Props {
-	title: string;
+	subtitle: string;
 	srcIcon: string;
+	iconAlt: string;
+    description:string;
 }
-const { title, srcIcon } = Astro.props;
+const { subtitle, srcIcon, iconAlt, description } = Astro.props;
 ---
 
 <div class="community-feature">
-    <img src=`${srcIcon}` alt="">
-    <h2>{title}</h2>
-    <p><slot></slot></p>
+    <img class="feature-icon" src=`${srcIcon}` alt={iconAlt}>
+    <Subtitle className='feature-subtitle' subtitle={subtitle}></Subtitle>
+    <Text text={description}></Text>
 </div>
+<style is:global>
+    @media (max-width: 1059px) {
+        .feature-subtitle {
+             padding-right: 20%;
+            }
+        .community-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .feature-icon {
+            margin-bottom: 10px;
+        }
+    }
+    
+	@media (min-width: 1060px) and (max-width: 1919px) {
+    
+    }
+    
+	@media (min-width: 1920px) { 
+        
+    }
+</style>

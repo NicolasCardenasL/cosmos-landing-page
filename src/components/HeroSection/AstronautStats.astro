@@ -4,18 +4,25 @@ interface Props {
 }
 const { className } = Astro.props;
 ---
-<div>
-    <img class=`mobile-astronaut-stats ${className}` src="./src/components/HeroSection/img/mobile-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+<div class="astronaut-stats-section">
+    <img class=`mobile-astronaut-stats ${className}` src="./src/components/HeroSection/img/mobile-astronaut-stats.png" alt="An image of girl in a spacial suit">
     <img class=`tablet-astronaut-stats ${className}` src="./src/components/HeroSection/img/tablet-astronaut-stats.svg" alt="An image of girl in a spacial suit">
     <img class=`desk-astronaut-stats ${className}` src="./src/components/HeroSection/img/desk-astronaut-stats.svg" alt="An image of girl in a spacial suit">
 </div>
 <style>
-    
+    .mobile-astronaut-stats, .tablet-astronaut-stats, .desk-astronaut-stats {
+        display: none;
+    }
     @media (max-width: 1059px) {
-        .mobile-astronaut-stats {
-            width: 360px;
-            height: 440px;
+        .astronaut-stats-section {
+            position: relative;
+            top: -200px;
             z-index: 9;
+        }
+        .mobile-astronaut-stats {
+            width: 300px;
+            height: 440px;
+            display: block;
         }
         .desk-astronaut-stats {
             display: None;

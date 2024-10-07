@@ -1,30 +1,35 @@
 ---
+import PartnerLogo from "./PartnerLogo.astro"
+
 const partnerLogosDir = "./src/components/PartnerLogos/img"
-const spaceXAlt = "SpaceX Logo"
-const nasaAlt = "Nasa Logo"
-const astroscaleAlt = "AstroScale Logo"
-const boeingAlt = "Boeing Logo"
 ---
 
 <section class="partner-logos">
-    <div>
-        <img src=`${partnerLogosDir}/spacex-logo-mobile.svg` alt=`${spaceXAlt}`>
-        <img src=`${partnerLogosDir}/spacex-logo-tablet.svg` alt=`${spaceXAlt}`>
-        <img src=`${partnerLogosDir}/spacex-logo-desk.svg` alt=`${spaceXAlt}`>
-    </div>
-    <div>
-        <img src=`${partnerLogosDir}/boeing-logo-mobible.svg` alt=`${boeingAlt}`>
-        <img src=`${partnerLogosDir}/boeing-logo-tablet.svg` alt=`${boeingAlt}`>
-        <img src=`${partnerLogosDir}/boeing-logo-desk.svg` alt=`${boeingAlt}`>
-    </div>
-    <div>
-        <img src=`${partnerLogosDir}/nasa-logo-mobile.svg` alt=`${nasaAlt}`>
-        <img src=`${partnerLogosDir}/nasa-logo-tablet.svg` alt=`${nasaAlt}`>
-        <img src=`${partnerLogosDir}/nasa-logo-desk.svg` alt=`${nasaAlt}`>
-    </div>
-    <div>
-        <img src=`${partnerLogosDir}/astroscale-logo-mobile.svg` alt=`${astroscaleAlt}`>
-        <img src=`${partnerLogosDir}/astroscale-logo-tablet.svg` alt=`${astroscaleAlt}`>
-        <img src=`${partnerLogosDir}/astroscale-logo-desk.svg` alt=`${astroscaleAlt}`>
-    </div>
+    <PartnerLogo imgAlt="SpaceX Logo" mobileImgSrc=`${partnerLogosDir}/spacex-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/spacex-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/spacex-logo-desk.svg`></PartnerLogo>
+    <PartnerLogo imgAlt="Boeing Logo" mobileImgSrc=`${partnerLogosDir}/boeing-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/boeing-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/boeing-logo-desk.svg`></PartnerLogo>
+    <PartnerLogo imgAlt="Nasa Logo" mobileImgSrc=`${partnerLogosDir}/nasa-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/nasa-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/nasa-logo-desk.svg`></PartnerLogo>
+    <PartnerLogo imgAlt="AstroScale Logo" mobileImgSrc=`${partnerLogosDir}/astroscale-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/astroscale-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}//astroscale-logo-desk.svg`></PartnerLogo>
 </section>
+
+<style>
+    @media (min-width: 0px) and (max-width: 1059px) {
+        .partner-logos {
+            margin: 50px 0px 50px 0px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-row-gap: 40px;
+        }
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+
+    }
+    
+	@media (min-width: 1920px) { 
+
+    }
+</style>
