@@ -15,9 +15,12 @@ const { mobileImgSrc, tabletImgSrc, deskImgSrc, imageWrapHeight, className } = A
 </section>
 
 <style define:vars={{imageWrapHeight}}>
-    .planet-overview-section {
+    .img-wrap {
+        height: var(--imageWrapHeight);
+        background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+        background-size: cover;
+        background-position: 10%;
     }
-    
     @media (max-width: 1059px) {
         .planet-overview-section {
             margin: 25px 0px;
@@ -29,24 +32,21 @@ const { mobileImgSrc, tabletImgSrc, deskImgSrc, imageWrapHeight, className } = A
         .img-wrap {
             padding: 24px; 
             height: var(--imageWrapHeight);
-            background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-            background-size: cover;
-            background-position: 10%;
-            display: flex;
-            flex-direction: column;
         }
     }
     
 	@media (min-width: 1060px) and (max-width: 1919px) {
-        /* .img-wrap {
-            opacity: 1;
-            max-width: 947px;
-            height: 381px;
-            width: 100dvw;
+        .planet-overview-section {
+            margin: 25px 0px;
+            height: 410px;
+            width: 100% ;
+            position: relative;
+        }
+        .img-wrap {
+            padding: 24px; 
+            height: var(--imageWrapHeight);
             border-radius: 40px;
-            background-image: url(var(--tabletImgSrc));
-            background-size: cover;
-        } */
+        }
     }
     
 	@media (min-width: 1920px) { 

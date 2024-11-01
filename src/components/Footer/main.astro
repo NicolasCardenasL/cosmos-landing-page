@@ -1,21 +1,55 @@
 ---
 import OsysseyLogo from "../Header/OsysseyLogo.astro";
+import Text from "../Text.astro";
 ---
 <section>
-    <div>
+    <div class="footer-info">
         <OsysseyLogo></OsysseyLogo>
+        <div class="footer-about-us">
+            <Text text="Stay Connected"></Text>
+            <Text text="Educacion"></Text>
+            <Text text="Community"></Text>
+            <Text text="About Us"></Text>
+        </div>
+        <div class="footer-terms">  
+            <Text text="Terms & Agreements"></Text>        
+            <Text text="Privacy policy"></Text>        
+        </div>
     </div>
-    <div>
-        <p>Stay Connected</p>
-        <p>Educacion</p>
-        <p>Community</p>
-        <p>About Us</p>
-    </div>
-    <div>
-        <p>Privacy policy</p>
-        <p>Terms & Agreements</p>
-    </div>
-    <div>
-        <p>[contact@odyssey.com].</p>
+    <div class="footer-contact">
+        <Text text="[contact@odyssey.com]"></Text>
     </div>
 </section>
+
+<style is:global>
+    @media (max-width: 1059px) {
+
+    }
+    
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        section {
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+        }
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .footer-about-us {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 50%;
+            justify-content: space-between;
+        }
+        .footer-terms {
+            display: grid;
+            grid: auto / repeat(2, 200px);
+        }
+    }footer-terms
+	@media (min-width: 1920px) { 
+        
+    }
+</style>

@@ -10,15 +10,17 @@ import OurMission from "./OurMission.astro"
 
 const herosectionImgSrc = './src/components/HeroSection/img'
 ---
-<section>
-    <PlanetOverview 
-        imageWrapHeight="381px"
-        mobileImgSrc=`${herosectionImgSrc}/mobile-earth-view.png`
-        tabletImgSrc=`${herosectionImgSrc}/tablet-earth-view.png`
-        deskImgSrc=`${herosectionImgSrc}/desk-earth-view.png`>
-        <Title className="overview-title" title="Unveiling the Wonders of the Universe"></Title>
-    </PlanetOverview>
-    <OurMission></OurMission>
+<PlanetOverview 
+imageWrapHeight="367px"
+mobileImgSrc=`${herosectionImgSrc}/mobile-earth-view.png`
+tabletImgSrc=`${herosectionImgSrc}/tablet-earth-view.png`
+deskImgSrc=`${herosectionImgSrc}/desk-earth-view.png`
+className="earth-overview">
+    <Title className="overview-title" title="Unveiling the Wonders of the Universe"></Title>
+</PlanetOverview>
+<section class="hero-description">
+    <OurMission className="our-mission"></OurMission>
+    <AstronautStats className="astronaut-stats"></AstronautStats>
 </section>
 
 <style is:global>
@@ -33,13 +35,46 @@ const herosectionImgSrc = './src/components/HeroSection/img'
         }
     }
     @media (min-width: 750px and max-width: 1059px)  {
-    } 
+        .hero-description {
+            display: grid;
+            grid: 1fr / 1fr 1fr;
+        } 
+        .our-mission {
+            grid-column: 1 / 2;
+        }
+        .astronaut-stats {
+            grid-column: 2 / 3;
+        }
+    }
+     
 
 	@media (min-width: 1060px) and (max-width: 1919px) {
-      
+        .hero-description {
+            display: grid;
+            grid: 265px / 1fr 1fr;
+            margin-top: 0;
+        } 
+        .our-mission {
+            margin-top: 0;
+            grid-column: 1 / 2;
+        }
+        .astronaut-stats {
+            /* I justified the content in order to put the astronaut image at the right */
+            /* If you remove this, the image will be kind of moved to the left a little*/
+            display: flex;
+            justify-content: end;
+            grid-column: 2 / 3;
+            /* -120% it's a magic number. I choosed it because it looks better in the final result. */
+            /* This was made in order to move up the image */
+            position: relative;
+            top: -120%;
+        }
+        .earth-overview {
+            padding: 30px;
+        }
     }
     
 	@media (min-width: 1920px) { 
 
-    } */
+    } 
 </style>

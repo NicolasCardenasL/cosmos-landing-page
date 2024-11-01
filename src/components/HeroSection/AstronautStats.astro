@@ -1,18 +1,19 @@
 ---
 interface Props {
-	className: string;
+	className?: string;
 }
 const { className } = Astro.props;
 ---
-<div class="astronaut-stats-section">
-    <img class=`mobile-astronaut-stats ${className}` src="./src/components/HeroSection/img/mobile-astronaut-stats.png" alt="An image of girl in a spacial suit">
-    <img class=`tablet-astronaut-stats ${className}` src="./src/components/HeroSection/img/tablet-astronaut-stats.svg" alt="An image of girl in a spacial suit">
-    <img class=`desk-astronaut-stats ${className}` src="./src/components/HeroSection/img/desk-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+<div class=`astronaut-stats-section ${className}`>
+    <img class=`mobile-astronaut-stats` src="./src/components/HeroSection/img/mobile-astronaut-stats.png" alt="An image of girl in a spacial suit">
+    <img class=`tablet-astronaut-stats` src="./src/components/HeroSection/img/tablet-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+    <img class=`desk-astronaut-stats` src="./src/components/HeroSection/img/desk-astronaut-stats.svg" alt="An image of girl in a spacial suit">
 </div>
 <style>
     .mobile-astronaut-stats, .tablet-astronaut-stats, .desk-astronaut-stats {
         display: none;
     }
+
     @media (max-width: 1059px) {
         .astronaut-stats-section {
             position: relative;
@@ -24,25 +25,14 @@ const { className } = Astro.props;
             height: 440px;
             display: block;
         }
-        .desk-astronaut-stats {
-            display: None;
-        }
-        
-        .tablet-astronaut-stats {
-            display: None;
-        }
     }
 
 	@media (min-width: 1060px) and (max-width: 1919px) {
         .tablet-astronaut-stats {
+            width: 511px;
+            height:600px;
+            display: block;
             min-width: 154px;
-        }
-        .desk-astronaut-stats {
-            display: None;
-        }
-        
-        .mobile-astronaut-stats {
-            display: None;
         }
     }
     

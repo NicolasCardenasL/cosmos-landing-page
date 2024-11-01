@@ -8,11 +8,12 @@ const educationalResourcesImgSrc = './src/components/EducationalResources/img'
 
 <section>
     <PlanetOverview 
+        className="mars-overview"
         imageWrapHeight="393px"
         mobileImgSrc=`${educationalResourcesImgSrc}/mobile-mars-overview.jpg`
         tabletImgSrc=`${educationalResourcesImgSrc}/tablet-mars-overview.png`
         deskImgSrc=`${educationalResourcesImgSrc}/desk-mars-overview.png`>
-        <Title className="overview-title" title="We are committed to making space science accessible to all. Explore our educational resources, including"></Title>
+        <Title className="mars-overview-title" title="We are committed to making space science accessible to all. Explore our educational resources, including"></Title>
     </PlanetOverview>
     <div class="e-resources">
         <Resource stepNumber="01" title="Online Free courses and tutorials" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
@@ -22,18 +23,52 @@ const educationalResourcesImgSrc = './src/components/EducationalResources/img'
 </section>
 
 <style is:global>
-    .e-resources {
-        position: relative;
-        /* The right position was writed base on the most similar-looking aproximation to the figma design*/
-        top: -140px;
-        /* The left position was writed base on the Resource padding */
-        left: -15px;
-        z-index: 10;
-        display: grid;
+    .mars-overview-title {
+        color: var(--color-text-white);
     }
-    .overview-title {
-        /* The max-width property was writed base on the most similar-looking aproximation to the figma design*/
-        max-width: 327px;
+    .e-resources {
+    }
+
+    @media (min-width: 0px) and (max-width: 1059px) {
+        .e-resources {
+            position: relative;
+            /* The right position was writed base on the most similar-looking aproximation to the figma design*/
+            top: -140px;
+            /* The left position was writed base on the Resource padding */
+            left: -15px;
+            z-index: 10;
+            display: grid;
+        }
+        .mars-overview-title {
+            /* The max-width property was writed base on the most similar-looking aproximation to the figma design*/
+            max-width: 327px;
+            
+        }
+    }
+
+	@media (min-width: 1060px) and (max-width: 1919px) {
+        .mars-overview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .mars-overview-title {
+            width: 800px;
+            text-align: center;
+        }
+        .e-resources {
+            position: relative;
+            /* I chose -200px  because it looked better in the resulting positon*/
+            top: -200px;
+            display: grid;
+            justify-items: center;
+            grid: 1fr /  1fr 1fr 1fr;   
+            height: 150px;
+        }
+    }
+    
+	@media (min-width: 1920px) { 
+        
     }
 </style>
 

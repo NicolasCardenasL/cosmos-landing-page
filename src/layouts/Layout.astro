@@ -83,6 +83,12 @@ const { title } = Astro.props;
 		line-height: var(--line-height-small);
 		color: var(--color-text-soft-black);
 	}
+	img {
+		user-select: none; /* Para navegadores modernos */
+        -webkit-user-select: none; /* Para navegadores basados en WebKit */
+        -moz-user-select: none; /* Para Firefox */
+        -ms-user-select: none; /* Para Internet Explorer/Edge */
+	}
 	@media (max-width: 1059px) {
 		body {
 			padding: 25px 25px;	

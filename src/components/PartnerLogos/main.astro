@@ -8,7 +8,7 @@ const partnerLogosDir = "./src/components/PartnerLogos/img"
     <PartnerLogo imgAlt="SpaceX Logo" mobileImgSrc=`${partnerLogosDir}/spacex-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/spacex-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/spacex-logo-desk.svg`></PartnerLogo>
     <PartnerLogo imgAlt="Boeing Logo" mobileImgSrc=`${partnerLogosDir}/boeing-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/boeing-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/boeing-logo-desk.svg`></PartnerLogo>
     <PartnerLogo imgAlt="Nasa Logo" mobileImgSrc=`${partnerLogosDir}/nasa-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/nasa-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/nasa-logo-desk.svg`></PartnerLogo>
-    <PartnerLogo imgAlt="AstroScale Logo" mobileImgSrc=`${partnerLogosDir}/astroscale-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/astroscale-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}//astroscale-logo-desk.svg`></PartnerLogo>
+    <PartnerLogo imgAlt="AstroScale Logo" mobileImgSrc=`${partnerLogosDir}/astroscale-logo-mobile.svg` tabletImgSrc=`${partnerLogosDir}/astroscale-logo-tablet.svg` deskImgSrc=`${partnerLogosDir}/astroscale-logo-desk.svg`></PartnerLogo>
 </section>
 
 <style>
@@ -17,8 +17,7 @@ const partnerLogosDir = "./src/components/PartnerLogos/img"
             margin: 50px 0px 50px 0px;
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid: 1fr 1fr / 1fr 1fr;
             justify-items: center;
             align-items: center;
             grid-row-gap: 40px;
@@ -26,10 +25,35 @@ const partnerLogosDir = "./src/components/PartnerLogos/img"
     }
 
 	@media (min-width: 1060px) and (max-width: 1919px) {
-
+        .partner-logos {
+            margin: 50px 0px 50px 0px;
+            width: 100%;
+            display: grid;
+            grid: 100% / 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            align-content: space-around;
+            justify-items: center;
+            /* display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-row-gap: 40px; */
+        }
     }
     
 	@media (min-width: 1920px) { 
-
+        .partner-logos {
+            margin: 50px 0px 50px 0px;
+            width: 100%;
+            display: flex;
+            background-color: aqua;
+            /* display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-row-gap: 40px; */
+        }
     }
 </style>
