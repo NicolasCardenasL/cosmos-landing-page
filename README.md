@@ -1,62 +1,56 @@
-# Project Title
+# Cosmos Landing Page UI
 ![webpage-view](https://github.com/user-attachments/assets/6b0d3e33-9f6e-4a25-95aa-ed50e5ad7026)
-Simple overview of use/purpose.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+This is a persona project of mine, it's about a visually atractive cosmos landing page with no functionality. It's available for use on computers, and cellphones. 
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* NodeJS 
+* pnpm
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. Clone this repo
+   ```sh
+   git clone https://github.com/nicoackerman/cosmos-landing-page.git
+   ```
+2. Install NPM packages
+   ```sh
+   pnpm install
+   ```
+3. Run a localhost server to execute the program
+   ```sh
+   pnpm run dev
+   ```
 
-### Executing program
+## My Process
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+### Built with
 
-## Help
+- Semantic HTML5 markup
+- Typescript
+- npm and Nodejs
+- Mobile-first workflow
+- [Advice slip json API](https://api.adviceslip.com/) -  For random advices
+- [React](https://reactjs.org/) - for states and components 
+- [Tailwindcss](https://tailwindcss.com/) - For styles
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+### After making this project 
+
+### Useful resources
+
+- [Tailwind official doc](https://tailwindcss.com/)
+- [React JS & Tailwind CSS Responsive Website - Beginner Friendly
+](https://youtu.be/ZU-drSVodBw?feature=shared) - This is an cool youtube tutorial by Code Commence for responsive apps.
+
 
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+- LinkedIn - [Nicolas Lopez](www.linkedin.com/in/nicolás-lópez-5305022a6)
+- UI Designer: [Giorgi Matsukatovi](https://www.figma.com/@giomats)
