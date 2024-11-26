@@ -3,11 +3,11 @@
 
 ## Description
 
-This is a persona project of mine, it's about a visually atractive cosmos landing page with no functionality. It's available for use on computers, and cellphones. 
+This is a persona project of mine, it's about a visually atractive cosmos landing page with no functionality (zero-javascript). It's available for use on computers and cellphones. 
 
 ## Getting Started
 
-### Dependencies
+###Dependencies
 
 * NodeJS 
 * pnpm
@@ -28,13 +28,14 @@ This is a persona project of mine, it's about a visually atractive cosmos landin
    ```
 ## Built with
 
-- HTML5, CSS & JavaScript
+- HTML5, CSS
 - Astro
 - Nodejs & pnpm
 
 ## What's next for this project?
 * Add CSS transitions and animations
 * Add a functional Login section
+* Add aditional pages to the website for the "stay connected", "education", "partner logos", "about us" sections
 
 ## Useful resources
 
