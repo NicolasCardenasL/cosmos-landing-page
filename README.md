@@ -26,31 +26,25 @@ This is a persona project of mine, it's about a visually atractive cosmos landin
    ```sh
    pnpm run dev
    ```
+## Built with
 
-## My Process
+- HTML5, CSS & JavaScript
+- Astro
+- Nodejs & pnpm
 
-### Built with
+## What's next for this project?
+* Add CSS transitions and animations
+* Add a functional Login section
 
-- Semantic HTML5 markup
-- Typescript
-- npm and Nodejs
-- Mobile-first workflow
-- [Advice slip json API](https://api.adviceslip.com/) -  For random advices
-- [React](https://reactjs.org/) - for states and components 
-- [Tailwindcss](https://tailwindcss.com/) - For styles
+## Useful resources
 
-### After making this project 
-
-### Useful resources
-
-- [Tailwind official doc](https://tailwindcss.com/)
-- [React JS & Tailwind CSS Responsive Website - Beginner Friendly
-](https://youtu.be/ZU-drSVodBw?feature=shared) - This is an cool youtube tutorial by Code Commence for responsive apps.
+- [Original Design]([https://tailwindcss.com/](https://www.figma.com/design/DqpM7ljFtOwdDboZRrXHoG/Cosmos-Landing-Page-UI-FREEBIE-(Community)?node-id=1-5&t=6RtPe848jXNheZ5d-0))
+- [Learn Astro 3 from Scratch: Course for Beginners + Astro Application
+]([https://youtu.be/ZU-drSVodBw?feature=shared](https://youtu.be/RB5tR_nqUEw?si=72hGrY3OIC65vc9T)) - Video tutorial to learn Astro
 
 
 ## Authors
 
-Contributors names and contact info
-
 - LinkedIn - [Nicolas Lopez](www.linkedin.com/in/nicolás-lópez-5305022a6)
 - UI Designer: [Giorgi Matsukatovi](https://www.figma.com/@giomats)
+
