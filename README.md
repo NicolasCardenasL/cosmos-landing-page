@@ -36,7 +36,9 @@ This is a persona project of mine, it's about a visually atractive cosmos landin
 * Add CSS transitions and animations
 * Add a functional Login section
 * Add aditional pages to the website for the "stay connected", "education", "partner logos", "about us" sections
-
+* Improve performance by optimizing images
+* Fix text alignment
+  
 ## Useful resources
 
 - [Original Design](https://www.figma.com/design/DqpM7ljFtOwdDboZRrXHoG/Cosmos-Landing-Page-UI-FREEBIE-(Community)?node-id=1-5&t=6RtPe848jXNheZ5d-0)
