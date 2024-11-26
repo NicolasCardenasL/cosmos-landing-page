@@ -39,9 +39,9 @@ This is a persona project of mine, it's about a visually atractive cosmos landin
 
 ## Useful resources
 
-- [Original Design]([https://tailwindcss.com/](https://www.figma.com/design/DqpM7ljFtOwdDboZRrXHoG/Cosmos-Landing-Page-UI-FREEBIE-(Community)?node-id=1-5&t=6RtPe848jXNheZ5d-0))
+- [Original Design](https://www.figma.com/design/DqpM7ljFtOwdDboZRrXHoG/Cosmos-Landing-Page-UI-FREEBIE-(Community)?node-id=1-5&t=6RtPe848jXNheZ5d-0)
 - [Learn Astro 3 from Scratch: Course for Beginners + Astro Application
-]([https://youtu.be/ZU-drSVodBw?feature=shared](https://youtu.be/RB5tR_nqUEw?si=72hGrY3OIC65vc9T)) - Video tutorial to learn Astro
+](https://youtu.be/RB5tR_nqUEw?si=72hGrY3OIC65vc9T) - Video tutorial to learn Astro
 
 
 ## Authors
