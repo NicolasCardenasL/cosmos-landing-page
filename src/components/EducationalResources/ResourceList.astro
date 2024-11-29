@@ -1,0 +1,28 @@
+---
+import Resource from "./Resource.astro";
+interface Props {
+	className?: string;
+	featuredElementClass?: string;
+}
+const { className, featuredElementClass } = Astro.props;
+---
+
+<ul class={className}>
+    <li>
+        <Resource stepNumber="01" title="Online Free courses and tutorials" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
+    </li>
+    <li>
+        <Resource stepNumber="02" title="Resources for teachers and educators" description="Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems and space habitats."></Resource>
+    </li>
+    <li class=`featured-resource ${featuredElementClass}`>
+        <Resource stepNumber="03" title="Book recommendations and reviews" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
+    </li>
+</ul>
+
+<style>
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+</style>

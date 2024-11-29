@@ -3,11 +3,12 @@ interface Props {
 	className?: string;
 }
 const { className } = Astro.props;
+const imgRoot = "./hero-section/img";
 ---
 <div class=`astronaut-stats-section ${className}`>
-    <img class=`mobile-astronaut-stats` src="./src/components/HeroSection/img/mobile-astronaut-stats.png" alt="An image of girl in a spacial suit">
-    <img class=`tablet-astronaut-stats` src="./src/components/HeroSection/img/tablet-astronaut-stats.svg" alt="An image of girl in a spacial suit">
-    <img class=`desk-astronaut-stats` src="./src/components/HeroSection/img/desk-astronaut-stats.svg" alt="An image of girl in a spacial suit">
+    <img class=`mobile-astronaut-stats` src=`${imgRoot}/mobile-astronaut-stats.png` alt="An image of girl in a spacial suit">
+    <img class=`tablet-astronaut-stats` src=`${imgRoot}/tablet-astronaut-stats.svg` alt="An image of girl in a spacial suit">
+    <img class=`desk-astronaut-stats` src=`${imgRoot}/desk-astronaut-stats.svg` alt="An image of girl in a spacial suit">
 </div>
 <style>
     .mobile-astronaut-stats, .tablet-astronaut-stats, .desk-astronaut-stats {
@@ -15,11 +16,6 @@ const { className } = Astro.props;
     }
 
     @media (max-width: 1059px) {
-        .astronaut-stats-section {
-            position: relative;
-            top: -200px;
-            z-index: 9;
-        }
         .mobile-astronaut-stats {
             width: 300px;
             height: 440px;
@@ -38,14 +34,8 @@ const { className } = Astro.props;
     
 	@media (min-width: 1920px) { 
         .desk-astronaut-stats {
+            display: block;
             min-width: 205px;
-        }
-        .tablet-astronaut-stats {
-            display: None;
-        }
-        
-        .mobile-astronaut-stats {
-            display: None;
         }
     }
 </style>

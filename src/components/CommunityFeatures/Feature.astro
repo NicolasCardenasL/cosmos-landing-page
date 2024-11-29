@@ -14,10 +14,19 @@ const { subtitle, srcIcon, iconAlt, description } = Astro.props;
 <div class="community-feature">
     <img class="feature-icon" src=`${srcIcon}` alt={iconAlt}>
     <Subtitle className='feature-subtitle' subtitle={subtitle}></Subtitle>
-    <Text text={description}></Text>
+    <Text text={description} className='feature-description'></Text>
 </div>
 <style is:global>
-    @media (max-width: 1059px) {
+    @media (max-width: 800px) {
+        .feature-description {
+            max-width: 600px;
+        }
+        .community-feature {
+            /* padding: 13px; */
+            line-height: 30px;
+        }
+    }
+    @media (min-width: 801px) and (max-width: 1059px) {
         .feature-subtitle {
              padding-right: 20%;
             }

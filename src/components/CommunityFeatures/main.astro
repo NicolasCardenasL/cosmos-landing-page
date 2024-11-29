@@ -2,7 +2,7 @@
 import Title from "../Title.astro";
 import Feature from "./Feature.astro";
 
-const communityFeaturesIconSrc = "./src/components/CommunityFeatures/icons"
+const communityFeaturesIconSrc = "./community-features/icons"
 ---
 <section class="community-features-section">
     <Title className="community-feautures-title" title="Join our vibrant community of space enthusiasts where you can"></Title>
@@ -12,15 +12,27 @@ const communityFeaturesIconSrc = "./src/components/CommunityFeatures/icons"
     <Feature subtitle="Space Technology" srcIcon=`${communityFeaturesIconSrc}/space-technology-icon.svg` iconAlt="Space Tech Icon" description="Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems."></Feature>
 </section>
 <style is:global>
-    @media (max-width: 1059px) {
+	@media (max-width: 800px) {
         .community-features-section {
             margin-bottom: 50px;
-        }
-        .community-features {
-            
+            display: grid;
+            gap: 20px;
         }
         .community-feautures-title {
             max-width: 650px;
+        }
+    }
+    @media (min-width: 800px) and (max-width: 1059px) {
+        .community-features-section {
+            margin-bottom: 50px;
+            display: grid;
+            grid: repeat(3, 1fr) / repeat(2, 1fr);
+            align-items: center;
+            gap: 10px;
+        }
+        .community-feautures-title {
+            max-width: 650px;
+            grid-column: 1 / 3;
         }
     }
 

@@ -1,62 +1,86 @@
 ---
 import PlanetOverview from "../PlanetOverview.astro";
 import Title from "../Title.astro";
-import Resource from "./Resource.astro";
+import ResourceList from "./ResourceList.astro";
 
-const educationalResourcesImgSrc = './src/components/EducationalResources/img'
+const imgRoot = './educational-resources/img'
 ---
 
-<section>
-    <PlanetOverview 
-        className="mars-overview"
-        imageWrapHeight="393px"
-        mobileImgSrc=`${educationalResourcesImgSrc}/mobile-mars-overview.jpg`
-        tabletImgSrc=`${educationalResourcesImgSrc}/tablet-mars-overview.png`
-        deskImgSrc=`${educationalResourcesImgSrc}/desk-mars-overview.png`>
-        <Title className="mars-overview-title" title="We are committed to making space science accessible to all. Explore our educational resources, including"></Title>
-    </PlanetOverview>
-    <div class="e-resources">
-        <Resource stepNumber="01" title="Online Free courses and tutorials" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
-        <Resource stepNumber="02" title="Resources for teachers and educators" description="Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems and space habitats."></Resource>
-        <Resource stepNumber="03" title="Book recommendations and reviews" description="Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe."></Resource>
-    </div>
+<PlanetOverview 
+    className="overview"
+    imageWrapHeight="393px"
+    mobileImgSrc=`${imgRoot}/mobile-mars-overview.jpg`
+    tabletImgSrc=`${imgRoot}/tablet-mars-overview.png`
+    deskImgSrc=`${imgRoot}/desk-mars-overview.png`>
+    <Title className="overview-title" title="We are committed to making space science accessible to all. Explore our educational resources, including"></Title>
+</PlanetOverview>
+<section class="resources">
+    <ResourceList className="resource-list"></ResourceList>
 </section>
 
 <style is:global>
-    .mars-overview-title {
+    .overview-title {
         color: var(--color-text-white);
     }
-    .e-resources {
-    }
-
-    @media (min-width: 0px) and (max-width: 1059px) {
-        .e-resources {
-            position: relative;
-            /* The right position was writed base on the most similar-looking aproximation to the figma design*/
-            top: -140px;
-            /* The left position was writed base on the Resource padding */
-            left: -15px;
-            z-index: 10;
+    @media (width <= 740px) {
+        .resources {
             display: grid;
+            align-items: center;
+            justify-items: center;
+            /* background-color: black; */
+            height: 750px;
         }
-        .mars-overview-title {
-            /* The max-width property was writed base on the most similar-looking aproximation to the figma design*/
-            max-width: 327px;
-            
+        .resource-list {
+            position: relative;
+            top: -150px;
+            display: grid;
+            gap: 5px;
+            grid-template-rows: repeat(3, 1fr);
         }
     }
+    @media (740px < width <= 1060px) {
+        .resources {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            /* background-color: black; */
+            height: 450px;
+            align-items: center;
+        }
+        .resource-list {
+            display: grid;
+            gap: 15px;
+            grid: repeat(2, 1fr) / repeat(2, 1fr);
+            position: relative;
+            top: -160px;
+            /* background-color: blue; */
+            align-items: center;
+            justify-items: center;
+        }
+        .overview-title {
+            width: 600px;
 
-	@media (min-width: 1060px) and (max-width: 1919px) {
-        .mars-overview {
+            text-align: center;
+        }
+        .overview {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+        }
+            
+    }
+    
+	@media (1060px < width <= 1920px) {
+        .overview {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .mars-overview-title {
+        .overview-title {
             width: 800px;
             text-align: center;
         }
-        .e-resources {
+        .resource-list {
             position: relative;
             /* I chose -200px  because it looked better in the resulting positon*/
             top: -200px;

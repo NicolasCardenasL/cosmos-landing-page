@@ -5,25 +5,28 @@ import Text from "../Text.astro";
 import Button from "../Button.astro";
 import Input from "../Input.astro";
 
-const callToActionImgDir = './src/components/CallToAction/img' 
+const callToActionImgDir = './call-to-action/img' 
 ---
 
 <PlanetOverview className="call-to-action" imageWrapHeight="311px" deskImgSrc=`${callToActionImgDir}/venus-planet.png` mobileImgSrc=`${callToActionImgDir}/venus-planet.png` tabletImgSrc=`${callToActionImgDir}/venus-planet.png`>
     <Title className="call-to-action-title" title="Join our community"></Title>
     <Text className="call-to-action-text" text="of stargazers, explorers, and cosmic enthusiasts as we embark on a journey through the cosmos like never before."></Text>
-    <div class="suscribe-section">
+    <div class="subscribe-section">
         <Input className="input-action" bgColor="white" textColor="#171E2780" placeHolder="Enter Your Email"></Input>
-        <Button className="" bgColor="#A9C2CB" textColor="white" span="Suscribe"></Button>
+        <Button className="" bgColor="#A9C2CB" textColor="white" span="Subscribe"></Button>
     </div>
 </PlanetOverview>
 
 <style is:global>
-    @media (min-width: 0px) and (max-width: 1059px) {
-        .suscribe-section {
-            display: inline-flex;
+    .subscribe-section {
+        display: flex;
+        width: 100%;
+    }
+    @media (max-width: 600px) {
+        .subscribe-section {
             flex-direction: column;
-            width: 100%;
-        }    
+            align-items: start;
+        } 
         .call-to-action {
             align-content: space-between;
         }
@@ -32,12 +35,34 @@ const callToActionImgDir = './src/components/CallToAction/img'
             font-weight: 800;
             line-height: 40.32px;
             text-align: left;
-
+            
+        } 
+    }
+    @media (min-width: 601px) and (max-width: 1059px) {
+        .call-to-action-text {
+            max-width: 70%;
         }
-
+        .call-to-action {
+            align-content: space-between;
+        }
+        .call-to-action-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 40.32px;
+            text-align: left;
+            
+        }
+        .subscribe-section {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
 	@media (min-width: 1060px) and (max-width: 1919px) {
+        .subscribe-section {
+            flex-direction: row;
+            align-items: center;
+        }
         .call-to-action {
             padding: 50px;
             display: flex;
@@ -55,12 +80,6 @@ const callToActionImgDir = './src/components/CallToAction/img'
         .call-to-action-text {
             max-width: 398px;
             
-        }
-        .suscribe-section {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            align-items: center;
         }
         .input-action {
             width: 416px;

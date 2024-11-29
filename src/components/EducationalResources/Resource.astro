@@ -5,43 +5,67 @@ interface Props {
 	title: string;
 	stepNumber: string;
     description: string;
+    className?: string;
 }
-const { title, stepNumber, description } = Astro.props;
+const { title, stepNumber, description, className } = Astro.props;
 ---
 
-<article class="feature">
+<article class=`resource-card ${className}`>
     <Text text={stepNumber} className="step-number"></Text>
-    <Subtitle className="feature-subtitle" subtitle={title}></Subtitle>
-    <Text className="feature-description" text={description}></Text>
+    <Subtitle className="subtitle" subtitle={title}></Subtitle>
+    <Text className="description" text={description}></Text>
 </article>
-
 <style is:global>
-    .feature {
-        padding: 0 15px;
+    .resource-card {
         background-color: white;
-        display: grid;
-        box-shadow: 0px 20px 39px -12px #63757C33;
         border-radius: 20px;
+        box-shadow: 0px 20px 39px -12px #63757C33;
+        display: grid;
+        grid-template-rows: repeat(2, 24%) 1fr;
+        align-items:center;
     }
     .step-number {
         color: var(--soft-blue);
+        margin: 0;
     }
-    @media (max-width: 1059px) {
-        .feature {
-            width: 100%;
+    .description {
+        margin: 0;
+    }
+    @media (width <= 740px) {
+        .resource-card {
+            padding: 15px;
+            width: 287px;
+            height: 258px;
+        }
+        .subtitle{
+            max-width: 250px;
+        }
+        .step-number {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 40.32px;
+        }
+    }
+    @media (740px < width <= 1060px) {
+        .subtitle{
+            max-width: 250px;
+        }
+        .resource-card {
+            padding: 15px;
+            width: 327px;
+            height: 250px; 
         }
         .step-number {
             font-size: 32px;
             font-weight: 800;
             line-height: 40.32px;
-            margin: 0;
         }
     }
     
-	@media (min-width: 1060px) and (max-width: 1919px) {
-        .feature {
-            width: 70%;
-            height: 260px;
+	@media (min-width: 1061px) and (max-width: 1919px) {
+        .resource-card {
+            width: calc(267px - 25px);
+            height: 282px;
             padding: 25px;
             display: flex;
             flex-direction: column;
@@ -51,12 +75,8 @@ const { title, stepNumber, description } = Astro.props;
             font-size: 32px;
             font-weight: 800;
             line-height: 40.32px;
-            margin: 0px;
         }
-        .feature-description {
-            margin: 0;
-        }
-        .feature-subtitle {
+        .subtitle {
             margin: 15px 0;
         }
     }

@@ -8,13 +8,13 @@ import OurMission from "./OurMission.astro"
 // import AstronautStats from "./AstronautStats.astro"
 // import EarthOverview from "./EarthOverview.astro"
 
-const herosectionImgSrc = './src/components/HeroSection/img'
+const imgRoot = './hero-section/img'
 ---
 <PlanetOverview 
 imageWrapHeight="367px"
-mobileImgSrc=`${herosectionImgSrc}/mobile-earth-view.png`
-tabletImgSrc=`${herosectionImgSrc}/tablet-earth-view.png`
-deskImgSrc=`${herosectionImgSrc}/desk-earth-view.png`
+mobileImgSrc=`${imgRoot}/mobile-earth-view.png`
+tabletImgSrc=`${imgRoot}/tablet-earth-view.png`
+deskImgSrc=`${imgRoot}/desk-earth-view.png`
 className="earth-overview">
     <Title className="overview-title" title="Unveiling the Wonders of the Universe"></Title>
 </PlanetOverview>
@@ -28,22 +28,36 @@ className="earth-overview">
         color: var(--color-text-white);
         max-width: 300px;
     }
-    @media (max-width: 749px) {
-        .astronaut-stats-section {
-            display: flex;
-            justify-content: center;
+    .hero-description {
+        display: grid;
+    }
+    @media (max-width: 788px) {
+        .hero-description {
+            grid-template-rows: 250px 1fr; /* These are magic numbers (they looked fine on screen)*/ 
+            justify-items: center; /* This was made in order to center the image*/
+        } 
+        .our-mission {
+            grid-row: 2 / 3; /* This was made in order to correctly position the text*/
+        }
+        .astronaut-stats {
+            position: relative;
+            top: -200px; /* This is a magic number (it looked fine on screen)*/ 
+            grid-row: 1 / 2; /* This was made in order to correctly position the image*/
         }
     }
-    @media (min-width: 750px and max-width: 1059px)  {
+    @media (min-width: 789px) and (max-width: 1059px)  {
         .hero-description {
-            display: grid;
-            grid: 1fr / 1fr 1fr;
+            grid: 300px / 1fr 1fr;
+            justify-items: center;
+            
         } 
         .our-mission {
             grid-column: 1 / 2;
         }
         .astronaut-stats {
-            grid-column: 2 / 3;
+            grid-column: 2 / 3; 
+            position: relative;
+            top: -200px; /* This is a magic number (it looked fine on screen)*/ 
         }
     }
      
