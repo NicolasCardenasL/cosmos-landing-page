@@ -7,7 +7,7 @@ This is a persona project of mine, it's about a visually atractive cosmos landin
 
 ## Getting Started
 
-###Dependencies
+### Dependencies
 
 * NodeJS 
 * pnpm
